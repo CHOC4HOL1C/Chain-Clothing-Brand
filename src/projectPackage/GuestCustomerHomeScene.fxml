@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane accessibleHelp="Doctor" accessibleRole="COMBO_BOX" accessibleText="Help" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectPackage.GuestCustomerHomeSceneController">
+    <children>
+        <Label alignment="CENTER" layoutX="-8.0" layoutY="3.0" prefHeight="58.0" prefWidth="322.0" text="Welcome To Reflux!" textAlignment="CENTER">
+            <font>
+                <Font name="AppleMyungjo Regular" size="30.0" />
+            </font>
+        </Label>
+      <VBox blendMode="DARKEN" layoutX="583.0" layoutY="65.0" prefHeight="440.0" prefWidth="223.0">
+         <children>
+            <Button fx:id="contactUsButton" layoutX="10.0" layoutY="60.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="265.0" style="-fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000; -fx-background-color: #ffffff#ffffff #ffffff#ffffff;" text="Contact Us" />
+         </children>
+      </VBox>
+      <Button fx:id="customerLogoutButton" layoutX="503.0" layoutY="18.0" mnemonicParsing="false" onAction="#logoutToLoginScene" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: #d2d3d4#d2d3d4; -fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000;" text="Logout" />
+      <TabPane fx:id="productsTabPane" layoutX="20.0" layoutY="62.0" prefHeight="975.0" prefWidth="564.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="mensCollectionTab" text="Mens Collection">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="504.0" prefWidth="506.0">
+                     <children>
+                        <ScrollPane fx:id="productScrollPane" layoutX="-9.0" layoutY="-10.0" prefHeight="379.0" prefWidth="575.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="928.0" prefWidth="574.0">
+                                 <children>
+                                    <Button fx:id="productOnebutton" alignment="BOTTOM_CENTER" layoutX="42.0" layoutY="33.0" mnemonicParsing="false" prefHeight="209.0" prefWidth="127.0" style="-fx-background-color: #ffffff#ffffff;" text="Button">
+                                       <graphic>
+                                          <Pane fx:id="productOnePane" prefHeight="200.0" prefWidth="205.0">
+                                             <children>
+<!--                                                <ImageView fx:id="productOneImageView" fitHeight="180.0" fitWidth="128.0" layoutX="-8.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                                                   <image>-->
+<!--                                                      <Image url="@Product-Image-SHRT1.jpeg" />-->
+<!--                                                   </image>-->
+<!--                                                </ImageView>-->
+                                                <Label fx:id="productOneNameLabel" alignment="CENTER" layoutX="17.0" layoutY="175.0" text="Casual Shirt">
+                                                   <font>
+                                                      <Font name="Lucida Grande" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="productOnePriceLabel" layoutX="27.0" layoutY="189.0" text="TK. 1999">
+                                                   <font>
+                                                      <Font name="AppleMyungjo Regular" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="180.0" fitWidth="128.0" layoutX="-9.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Product-Image-SHRT1.jpeg" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </Pane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="productTwoButton" alignment="BOTTOM_CENTER" layoutX="212.0" layoutY="33.0" mnemonicParsing="false" prefHeight="209.0" prefWidth="127.0" style="-fx-background-color: #ffffff#ffffff;" text="Button">
+                                       <graphic>
+                                          <Pane fx:id="productTwoPane" prefHeight="200.0" prefWidth="205.0">
+                                             <children>
+<!--                                                <ImageView fx:id="productTwoImageView" fitHeight="180.0" fitWidth="128.0" layoutX="-8.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                                                   <image>-->
+<!--                                                      <Image url="@Product-Image-Shirt2.jpeg" />-->
+<!--                                                   </image>-->
+<!--                                                </ImageView>-->
+                                                <Label fx:id="productTwoNameLabel" alignment="CENTER" layoutX="17.0" layoutY="175.0" text="Casual Shirt">
+                                                   <font>
+                                                      <Font name="Lucida Grande" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="productTwoPriceLabel" layoutX="27.0" layoutY="189.0" text="TK. 1999">
+                                                   <font>
+                                                      <Font name="AppleMyungjo Regular" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="180.0" fitWidth="128.0" layoutX="-9.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Product-Image-Shirt2.jpeg" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </Pane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="productFourButton" alignment="BOTTOM_CENTER" layoutX="42.0" layoutY="260.0" mnemonicParsing="false" prefHeight="209.0" prefWidth="127.0" style="-fx-background-color: #ffffff#ffffff;" text="Button">
+                                       <graphic>
+                                          <Pane fx:id="productFourPane" prefHeight="200.0" prefWidth="205.0">
+                                             <children>
+<!--                                                <ImageView fx:id="productFourImageView" fitHeight="180.0" fitWidth="128.0" layoutX="-8.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                                                   <image>-->
+<!--                                                      <Image url="@Product-Image-PNJB1.jpeg" />-->
+<!--                                                   </image>-->
+<!--                                                </ImageView>-->
+                                                <Label fx:id="productFourNameLabel" alignment="CENTER" layoutX="17.0" layoutY="175.0" text="Eid Panajabi">
+                                                   <font>
+                                                      <Font name="Lucida Grande" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="productFourPriceLabel" layoutX="27.0" layoutY="189.0" text="TK. 3999">
+                                                   <font>
+                                                      <Font name="AppleMyungjo Regular" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="180.0" fitWidth="128.0" layoutX="-9.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Product-Image-PNJB1.jpeg" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </Pane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="productFiveButton" alignment="BOTTOM_CENTER" layoutX="212.0" layoutY="260.0" mnemonicParsing="false" prefHeight="209.0" prefWidth="127.0" style="-fx-background-color: #ffffff#ffffff;" text="Button">
+                                       <graphic>
+                                          <Pane fx:id="productFivePane" prefHeight="200.0" prefWidth="205.0">
+                                             <children>
+<!--                                                <ImageView fx:id="productFiveImageView" fitHeight="180.0" fitWidth="128.0" layoutX="-8.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                                                   <image>-->
+<!--                                                      <Image url="@Product-Image-PNJB2.jpeg" />-->
+<!--                                                   </image>-->
+<!--                                                </ImageView>-->
+                                                <Label fx:id="productFiveNameLabel" alignment="CENTER" layoutX="17.0" layoutY="175.0" text="Eid Panjabi">
+                                                   <font>
+                                                      <Font name="Lucida Grande" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="productFivePriceLabel" layoutX="27.0" layoutY="189.0" text="TK. 3999">
+                                                   <font>
+                                                      <Font name="AppleMyungjo Regular" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="180.0" fitWidth="128.0" layoutX="-9.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Product-Image-PNJB2.jpeg" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </Pane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="productSixButton" alignment="BOTTOM_CENTER" layoutX="383.0" layoutY="259.0" mnemonicParsing="false" prefHeight="209.0" prefWidth="127.0" style="-fx-background-color: #ffffff#ffffff;" text="Button">
+                                       <graphic>
+                                          <Pane fx:id="productSixPane" prefHeight="200.0" prefWidth="205.0">
+                                             <children>
+<!--                                                <ImageView fx:id="productSixImageView" fitHeight="180.0" fitWidth="128.0" layoutX="-8.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                                                   <image>-->
+<!--                                                      <Image url="@Product-Image-PNJB3.jpeg" />-->
+<!--                                                   </image>-->
+<!--                                                </ImageView>-->
+                                                <Label fx:id="productSixNameLabel" alignment="CENTER" layoutX="17.0" layoutY="175.0" text="Eid Panjabi">
+                                                   <font>
+                                                      <Font name="Lucida Grande" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="productSixPriceLabel" layoutX="27.0" layoutY="189.0" text="TK. 3999">
+                                                   <font>
+                                                      <Font name="AppleMyungjo Regular" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="180.0" fitWidth="128.0" layoutX="-9.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Product-Image-PNJB3.jpeg" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </Pane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="productThreeButton" alignment="BOTTOM_CENTER" layoutX="383.0" layoutY="33.0" mnemonicParsing="false" prefHeight="209.0" prefWidth="127.0" style="-fx-background-color: #ffffff#ffffff;" text="Button">
+                                       <graphic>
+                                          <Pane fx:id="productThreePane" prefHeight="200.0" prefWidth="205.0">
+                                             <children>
+<!--                                                <ImageView fx:id="productThreeImageView" fitHeight="180.0" fitWidth="128.0" layoutX="-8.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                                                   <image>-->
+<!--                                                      <Image url="@Product-Image-Shirt3.jpeg" />-->
+<!--                                                   </image>-->
+<!--                                                </ImageView>-->
+                                                <Label fx:id="productThreeNameLabel" alignment="CENTER" layoutX="17.0" layoutY="175.0" text="Casual Shirt">
+                                                   <font>
+                                                      <Font name="Lucida Grande" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label fx:id="productThreePriceLabel" layoutX="27.0" layoutY="189.0" text="TK. 1999">
+                                                   <font>
+                                                      <Font name="AppleMyungjo Regular" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="180.0" fitWidth="128.0" layoutX="-9.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Product-Image-Shirt3.jpeg" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </Pane>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="womensCollectionTab" text="Womens Collection">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="signUpButton" layoutX="628.0" layoutY="18.0" mnemonicParsing="false" onAction="#guestCustomerSignUp" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: #d2d3d4#d2d3d4; -fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000;" text="Sign Up" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane accessibleHelp="Doctor" accessibleRole="COMBO_BOX" accessibleText="Help" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectPackage.SupplierHomeSceneController">
+    <children>
+        <Label layoutX="23.0" layoutY="24.0" prefHeight="25.0" prefWidth="161.0" text="Supplier Homepage">
+            <font>
+                <Font name="AppleMyungjo Regular" size="17.0" />
+            </font>
+        </Label>
+      <VBox blendMode="DARKEN" layoutX="564.0" layoutY="57.0" prefHeight="440.0" prefWidth="239.0">
+         <children>
+            <Button fx:id="checkOrderButton" layoutX="10.0" layoutY="153.0" mnemonicParsing="false" onAction="#openSupplierCheckOrderButton" prefHeight="40.0" prefWidth="290.0" style="-fx-text-fill: #000000#000000; -fx-background-color: #ffffff#ffffff;" text="Check Incoming Order" wrapText="true" />
+            <Button fx:id="deliverBatchButton" layoutX="10.0" layoutY="50.0" mnemonicParsing="false" onAction="#openSupplierDeliverBatch" prefHeight="42.0" prefWidth="265.0" style="-fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000; -fx-background-color: #ffffff#ffffff #ffffff#ffffff;" text="Deliver Batch (OrderList)" />
+            <Button fx:id="contactButton" layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onAction="#openSupplierContactsPage" prefHeight="40.0" prefWidth="289.0" style="-fx-text-fill: #000000#000000; -fx-background-color: #ffffff#ffffff;" text="Contact " wrapText="true" />
+            <Button layoutX="10.0" layoutY="60.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="362.0" style="-fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000; -fx-background-color: #ffffff#ffffff #ffffff#ffffff;" text="Complaint" />
+            <Pane prefHeight="33.0" prefWidth="269.0" />
+         </children>
+      </VBox>
+      <Button layoutX="632.0" layoutY="18.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="118.0" style="-fx-background-color: #d2d3d4#d2d3d4; -fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000;" text="Notifications">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Notification-Icon-PNG-715x715.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Circle fill="RED" layoutX="750.0" layoutY="18.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+      <Pane layoutX="17.0" layoutY="62.0" prefHeight="85.0" prefWidth="159.0" style="-fx-background-color: #00ba95#00ba95 #00ba95#00ba95;">
+         <children>
+            <Button layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="161.0" style="-fx-text-fill: #ffffff#ffffff #ffffff#ffffff; -fx-background-color: #00ba95#00ba95;" text="Order List" wrapText="true" />
+            <Label layoutX="50.0" layoutY="54.0" style="-fx-text-fill: #ffffff#ffffff #ffffff#ffffff #ffffff#ffffff #ffffff#ffffff;" text="Label" />
+         </children>
+      </Pane>
+      <Pane layoutX="189.0" layoutY="62.0" prefHeight="85.0" prefWidth="161.0">
+         <children>
+            <Button layoutY="1.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="161.0" style="-fx-text-fill: #ffffff#ffffff #ffffff#ffffff; -fx-background-color: #fc427a#fc427a;" text="Payments Pending" wrapText="true" />
+            <Label layoutX="28.0" layoutY="54.0" text="Q3" />
+         </children>
+      </Pane>
+      <Label layoutX="247.0" layoutY="207.0" style="-fx-text-fill: #ffffff#ffffff #ffffff#ffffff #ffffff#ffffff #ffffff#ffffff;" text="\$0.00" />
+      <Pane layoutX="363.0" layoutY="62.0" prefHeight="85.0" prefWidth="161.0">
+         <children>
+            <Button layoutY="1.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="161.0" style="-fx-text-fill: #ffffff#ffffff #ffffff#ffffff; -fx-background-color: #ffb730#ffb730;" text="Payments Recieved " wrapText="true" />
+            <Label layoutX="55.0" layoutY="49.0" style="-fx-text-fill: #ffffff#ffffff #ffffff#ffffff #ffffff#ffffff #ffffff#ffffff;" />
+            <Label layoutX="22.0" layoutY="49.0" text="Q2 " />
+         </children>
+      </Pane>
+      <ScrollPane layoutX="18.0" layoutY="188.0" prefHeight="290.0" prefWidth="506.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="474.0" prefWidth="502.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="293.0" text="Supplier Rate for Products">
+                     <font>
+                        <Font name="AppleMyungjo Regular" size="17.0" />
+                     </font>
+                  </Label>
+                  <TableView layoutX="6.0" layoutY="38.0" prefHeight="200.0" prefWidth="476.0">
+                    <columns>
+                      <TableColumn prefWidth="73.61157035827637" text="Task name" />
+                      <TableColumn prefWidth="260.88843536376953" text="Task Details" />
+                        <TableColumn minWidth="0.0" prefWidth="57.82392883300781" text="Deadline" />
+                        <TableColumn prefWidth="84.40826416015625" text="Task Progress" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Button fx:id="logoutButton" layoutX="505.0" layoutY="18.0" mnemonicParsing="false" onAction="#logout" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: #d2d3d4#d2d3d4; -fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000;" text="Logout">
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Logout-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+    </children>
+</AnchorPane>

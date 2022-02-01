@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane accessibleHelp="Doctor" accessibleRole="COMBO_BOX" accessibleText="Help" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectPackage.CustomerHomeSceneController">
+    <children>
+        <Label alignment="CENTER" layoutX="-8.0" layoutY="3.0" prefHeight="58.0" prefWidth="322.0" text="Welcome To Reflux!" textAlignment="CENTER">
+            <font>
+                <Font name="AppleMyungjo Regular" size="30.0" />
+            </font>
+        </Label>
+      <VBox blendMode="DARKEN" layoutX="583.0" layoutY="65.0" prefHeight="440.0" prefWidth="223.0">
+         <children>
+            <Button fx:id="trackOrderButton" mnemonicParsing="false" onAction="#openCustomerTrackOrder" prefHeight="34.0" prefWidth="269.0" style="-fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000; -fx-background-color: #ffffff#ffffff #ffffff#ffffff;" text="Track Order" />
+            <Button fx:id="contactUsButton" layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#openCustomerContactUsPage" prefHeight="35.0" prefWidth="265.0" style="-fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000; -fx-background-color: #ffffff#ffffff #ffffff#ffffff;" text="Contact Us" />
+            <Button fx:id="editCustomerInfoButton" layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onAction="#openCustomerEditInfo" prefHeight="32.0" prefWidth="275.0" style="-fx-text-fill: #000000#000000; -fx-background-color: #ffffff#ffffff;" text="Edit Customer Info" wrapText="true" />
+            <Button fx:id="getPremiumButton" layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onAction="#openCustomerGetPremiumPage" prefHeight="34.0" prefWidth="266.0" style="-fx-text-fill: #000000#000000; -fx-background-color: #ffffff#ffffff;" text="Get Premium" wrapText="true" />
+         </children>
+      </VBox>
+      <Button fx:id="notificationsButton" layoutX="632.0" layoutY="18.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: #d2d3d4#d2d3d4; -fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000;" text="Notifications">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Notification-Icon-PNG-715x715.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Circle fill="RED" layoutX="750.0" layoutY="18.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button fx:id="logoutButton" layoutX="503.0" layoutY="18.0" mnemonicParsing="false" onAction="#logoutToLoginScene" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: #d2d3d4#d2d3d4; -fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000;" text="Logout">
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Logout-icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <TabPane layoutX="20.0" layoutY="62.0" prefHeight="975.0" prefWidth="564.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Mens Collection">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="504.0" prefWidth="506.0">
+                     <children>
+                        <ScrollPane layoutX="-9.0" layoutY="-10.0" prefHeight="379.0" prefWidth="575.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="928.0" prefWidth="574.0">
+                                 <children>
+                                    <Button fx:id="prodOneButton" alignment="BOTTOM_CENTER" layoutX="42.0" layoutY="33.0" mnemonicParsing="false" prefHeight="209.0" prefWidth="127.0" style="-fx-background-color: #ffffff#ffffff;" text="Button">
+                                       <graphic>
+                                          <Pane prefHeight="200.0" prefWidth="205.0">
+                                             <children>
+                                                <ImageView fitHeight="180.0" fitWidth="128.0" layoutX="-8.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Product-Image-SHRT1.jpeg" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="17.0" layoutY="175.0" text="Casual Shirt">
+                                                   <font>
+                                                      <Font name="Lucida Grande" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="27.0" layoutY="189.0" text="TK. 1999">
+                                                   <font>
+                                                      <Font name="AppleMyungjo Regular" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="productTwoButton" alignment="BOTTOM_CENTER" layoutX="212.0" layoutY="33.0" mnemonicParsing="false" prefHeight="209.0" prefWidth="127.0" style="-fx-background-color: #ffffff#ffffff;" text="Button">
+                                       <graphic>
+                                          <Pane prefHeight="200.0" prefWidth="205.0">
+                                             <children>
+                                                <ImageView fitHeight="180.0" fitWidth="128.0" layoutX="-8.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Product-Image-Shirt2.jpeg" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="17.0" layoutY="175.0" text="Casual Shirt">
+                                                   <font>
+                                                      <Font name="Lucida Grande" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="27.0" layoutY="189.0" text="TK. 1999">
+                                                   <font>
+                                                      <Font name="AppleMyungjo Regular" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="prodThreeButton" alignment="BOTTOM_CENTER" layoutX="383.0" layoutY="33.0" mnemonicParsing="false" prefHeight="209.0" prefWidth="127.0" style="-fx-background-color: #ffffff#ffffff;" text="Button">
+                                       <graphic>
+                                          <Pane prefHeight="200.0" prefWidth="205.0">
+                                             <children>
+                                                <ImageView fitHeight="180.0" fitWidth="128.0" layoutX="-8.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Product-Image-Shirt3.jpeg" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="17.0" layoutY="175.0" text="Casual Shirt">
+                                                   <font>
+                                                      <Font name="Lucida Grande" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="27.0" layoutY="189.0" text="TK. 1999">
+                                                   <font>
+                                                      <Font name="AppleMyungjo Regular" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="prodFourButton" alignment="BOTTOM_CENTER" layoutX="42.0" layoutY="260.0" mnemonicParsing="false" prefHeight="209.0" prefWidth="127.0" style="-fx-background-color: #ffffff#ffffff;" text="Button">
+                                       <graphic>
+                                          <Pane prefHeight="200.0" prefWidth="205.0">
+                                             <children>
+                                                <ImageView fitHeight="180.0" fitWidth="128.0" layoutX="-8.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Product-Image-PNJB1.jpeg" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="17.0" layoutY="175.0" text="Eid Panajabi">
+                                                   <font>
+                                                      <Font name="Lucida Grande" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="27.0" layoutY="189.0" text="TK. 3999">
+                                                   <font>
+                                                      <Font name="AppleMyungjo Regular" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="prodFiveButton" alignment="BOTTOM_CENTER" layoutX="212.0" layoutY="260.0" mnemonicParsing="false" prefHeight="209.0" prefWidth="127.0" style="-fx-background-color: #ffffff#ffffff;" text="Button">
+                                       <graphic>
+                                          <Pane prefHeight="200.0" prefWidth="205.0">
+                                             <children>
+                                                <ImageView fitHeight="180.0" fitWidth="128.0" layoutX="-8.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Product-Image-PNJB2.jpeg" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="17.0" layoutY="175.0" text="Eid Panjabi">
+                                                   <font>
+                                                      <Font name="Lucida Grande" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="27.0" layoutY="189.0" text="TK. 3999">
+                                                   <font>
+                                                      <Font name="AppleMyungjo Regular" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="prodSixButton" alignment="BOTTOM_CENTER" layoutX="383.0" layoutY="259.0" mnemonicParsing="false" prefHeight="209.0" prefWidth="127.0" style="-fx-background-color: #ffffff#ffffff;" text="Button">
+                                       <graphic>
+                                          <Pane prefHeight="200.0" prefWidth="205.0">
+                                             <children>
+                                                <ImageView fitHeight="180.0" fitWidth="128.0" layoutX="-8.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@Product-Image-PNJB3.jpeg" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label alignment="CENTER" layoutX="17.0" layoutY="175.0" text="Eid Panjabi">
+                                                   <font>
+                                                      <Font name="Lucida Grande" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="27.0" layoutY="189.0" text="TK. 3999">
+                                                   <font>
+                                                      <Font name="AppleMyungjo Regular" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </Pane>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Womens Collection">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="cartButton" layoutX="376.0" layoutY="18.0" mnemonicParsing="false" onAction="#openCustomerOrderCart" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: #d2d3d4#d2d3d4; -fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000;" text="Cart ">
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Cart-icon.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+    </children>
+</AnchorPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectPackage.ManagerCheckComplaintsListController">
+   <children>
+      <Button fx:id="backToHomeButton" layoutX="14.0" layoutY="17.0" mnemonicParsing="false" onAction="#backToManagerHome" prefHeight="28.0" prefWidth="120.0" style="-fx-background-color: #d2d3d4#d2d3d4 #d2d3d4#d2d3d4; -fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000 #000000#000000 #000000#000000 #000000#000000 #000000#000000;" text="Back to home">
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Home-Icon.jpeg" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label layoutX="29.0" layoutY="72.0" text="List of Complaints from Employees">
+         <font>
+            <Font name="Monaco" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="313.0" layoutY="23.0" text="Employee Management -&gt; ">
+         <font>
+            <Font name="Lucida Grande" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="191.0" layoutY="23.0" text="Manager Home -&gt; ">
+         <font>
+            <Font name="Lucida Grande" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="191.0" layoutY="45.0" text="-&gt; Check Complaints List">
+         <font>
+            <Font name="Lucida Grande" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="140.0" layoutY="18.0" mnemonicParsing="false" onAction="#backToEmployeeManagement" prefHeight="16.0" prefWidth="28.0">
+         <graphic>
+            <ImageView fitHeight="17.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Back-button-Icon.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Pane layoutX="28.0" layoutY="115.0" prefHeight="247.0" prefWidth="544.0">
+         <children>
+            <ScrollPane prefHeight="247.0" prefWidth="544.0">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="628.0" prefWidth="543.0">
+                     <children>
+                        <Label layoutX="16.0" layoutY="13.0" prefHeight="36.0" prefWidth="493.0" style="-fx-background-color: #005a96#005a96 #005a96#005a96 #005a96#005a96 #005a96#005a96; -fx-text-fill: #ffffff;" text="  List of employee complaints are displayed here (click to see individually)...">
+                           <font>
+                              <Font name="Futura Medium" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="17.0" layoutY="71.0" text="Employee 1 - " />
+                        <Label layoutX="17.0" layoutY="95.0" text="Employee 2 - " />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

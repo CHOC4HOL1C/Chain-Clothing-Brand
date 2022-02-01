@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectPackage.ManagerAssignEmployeeNewDailyTasksController">
+   <children>
+      <ComboBox editable="true" layoutX="14.0" layoutY="95.0" prefHeight="26.0" prefWidth="165.0" promptText="Choose Employee..." />
+      <Button fx:id="confirmButton" layoutX="525.0" layoutY="360.0" mnemonicParsing="false" style="-fx-background-color: #00a2ff#00a2ff #00a2ff#00a2ff; -fx-text-fill: #ffffff#ffffff;" text="Confirm" />
+      <Label layoutX="313.0" layoutY="23.0" text="Assign Task To Employee ">
+         <font>
+            <Font name="Lucida Grande" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="186.0" layoutY="23.0" text="Manager Home -&gt; ">
+         <font>
+            <Font name="Lucida Grande" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="186.0" layoutY="45.0" text="-&gt; Assign New Daily Task">
+         <font>
+            <Font name="Lucida Grande" size="13.0" />
+         </font>
+      </Label>
+      <TextField layoutX="186.0" layoutY="95.0" prefHeight="26.0" prefWidth="262.0" promptText="Task Title..." />
+      <TextField layoutX="454.0" layoutY="95.0" prefHeight="26.0" prefWidth="132.0" promptText="Deadline (if any)" />
+      <TextArea layoutX="14.0" layoutY="129.0" prefHeight="223.0" prefWidth="572.0" promptText="Enter Task Instructions (if any)" />
+      <Label fx:id="absentEmployeeError" layoutX="14.0" layoutY="78.0" textFill="RED" />
+      <Button fx:id="backButton" layoutX="137.0" layoutY="18.0" mnemonicParsing="false" onAction="#backToAssignTasksPage" prefHeight="17.0" prefWidth="38.0" style="-fx-background-color: #d2d3d4#d2d3d4; -fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000;">
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Back-button-Icon.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="backToHomeButton" layoutX="14.0" layoutY="18.0" mnemonicParsing="false" onAction="#backToManagerHome" prefHeight="28.0" prefWidth="120.0" style="-fx-background-color: #d2d3d4#d2d3d4 #d2d3d4#d2d3d4; -fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000 #000000#000000 #000000#000000 #000000#000000 #000000#000000;" text="Back to Home" />
+   </children>
+</AnchorPane>

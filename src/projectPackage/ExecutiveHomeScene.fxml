@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import com.gluonhq.charm.glisten.control.Avatar?>-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane accessibleHelp="Doctor" accessibleRole="COMBO_BOX" accessibleText="Help" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectPackage.ExecutiveHomeSceneController">
+    <children>
+        <Label alignment="CENTER" layoutX="-8.0" layoutY="3.0" prefHeight="58.0" prefWidth="322.0" text="Welcome Executive!" textAlignment="CENTER">
+            <font>
+                <Font name="AppleMyungjo Regular" size="30.0" />
+            </font>
+        </Label>
+      <VBox blendMode="DARKEN" layoutX="535.0" layoutY="65.0" prefHeight="440.0" prefWidth="314.0">
+         <children>
+            <Button fx:id="branchReportsButton" mnemonicParsing="false" onAction="#openBranchReports" prefHeight="34.0" prefWidth="269.0" style="-fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000; -fx-background-color: #ffffff#ffffff #ffffff#ffffff;" text="Branch Reports    ">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Branch-Report-Icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="quarterlyReportsButton" layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#openQuarterlyReports" prefHeight="35.0" prefWidth="265.0" style="-fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000; -fx-background-color: #ffffff#ffffff #ffffff#ffffff;" text="Quarterly Reports">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Quarterly-report-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="pollsButton" layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onAction="#openPollsPage" prefHeight="32.0" prefWidth="275.0" style="-fx-text-fill: #000000#000000; -fx-background-color: #ffffff#ffffff;" text=" Polls                       " wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Polls-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="meetingsButton" layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onAction="#openMeetingsPage" prefHeight="34.0" prefWidth="266.0" style="-fx-text-fill: #000000#000000; -fx-background-color: #ffffff#ffffff;" text="Meetings               " wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Meeting-Icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="assignTargetButton" layoutX="10.0" layoutY="153.0" mnemonicParsing="false" onAction="#openAssignManagerTaskPage" prefHeight="33.0" prefWidth="330.0" style="-fx-text-fill: #000000#000000; -fx-background-color: #ffffff#ffffff;" text="Assign Target to Manager" wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Target-icon.jpeg" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="allotBonusButton" layoutX="10.0" layoutY="176.0" mnemonicParsing="false" onAction="#openExecutiveAllotBonusesPage" prefHeight="33.0" prefWidth="266.0" style="-fx-text-fill: #000000#000000; -fx-background-color: #ffffff#ffffff;" text="Allot Bonus           " wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Alot-Bonus-Icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="budgetButton" layoutX="10.0" layoutY="209.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="266.0" style="-fx-text-fill: #000000#000000; -fx-background-color: #ffffff#ffffff;" text="Budget                  " wrapText="true">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Budget-Icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <TitledPane fx:id="eventsTiltedPane" animated="false" prefHeight="184.0" prefWidth="269.0" text="Contacts">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="181.0" prefWidth="325.0">
+                     <children>
+                        <Button fx:id="contactsButton" layoutX="1.0" mnemonicParsing="false" onAction="#openExecutiveContactsPage" prefHeight="154.0" prefWidth="265.0" style="-fx-text-fill: #000000#000000 #000000#000000; -fx-background-color: #ffffff#ffffff #ffffff#ffffff #ffffff#ffffff #ffffff#ffffff;" wrapText="true" />
+<!--                        <ImageView fx:id="eventImage" fitHeight="57.0" fitWidth="63.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                           <image>-->
+<!--                              <Image url="@Contacts%20Icon.png" />-->
+<!--                           </image>-->
+<!--                        </ImageView>-->
+                        <Label fx:id="eventLabel1" layoutX="79.0" layoutY="19.0" text="Contacts">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="eventsublabel" layoutX="80.0" layoutY="43.0" prefHeight="85.0" prefWidth="128.0" text="(All your contacts including Executives and Managers are here)" wrapText="true" />
+                        <ImageView fitHeight="58.0" fitWidth="54.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Contacts-Icon.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+         </children>
+      </VBox>
+      <Button fx:id="notificationsButton" layoutX="632.0" layoutY="18.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: #d2d3d4#d2d3d4; -fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000;" text="Notifications">
+         <graphic>
+            <ImageView fitHeight="31.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Notification-Icon-PNG-715x715.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Circle fill="RED" layoutX="750.0" layoutY="18.0" radius="6.0" stroke="BLACK" strokeType="INSIDE" />
+      <Pane layoutX="17.0" layoutY="62.0" prefHeight="85.0" prefWidth="159.0" style="-fx-background-color: #00ba95#00ba95 #00ba95#00ba95;">
+         <children>
+            <Button fx:id="totalSalesButton" layoutX="-1.0" layoutY="1.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="161.0" style="-fx-text-fill: #ffffff#ffffff #ffffff#ffffff; -fx-background-color: #00ba95#00ba95;" text="Total Sales" wrapText="true" />
+<!--            <ImageView fx:id="salesIcon" fitHeight="31.0" fitWidth="33.0" layoutX="14.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">-->
+<!--               <image>-->
+<!--                  <Image url="@Budget%20Icon.png" />-->
+<!--               </image>-->
+<!--            </ImageView>-->
+            <Label layoutX="45.0" layoutY="49.0" style="-fx-text-fill: #ffffff#ffffff #ffffff#ffffff #ffffff#ffffff #ffffff#ffffff;" text="\$71,258 (Q2)" />
+            <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="5.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Budget-Icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="189.0" layoutY="62.0" prefHeight="85.0" prefWidth="161.0">
+         <children>
+            <Button fx:id="salesTargetButton" layoutY="1.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="161.0" style="-fx-text-fill: #ffffff#ffffff #ffffff#ffffff; -fx-background-color: #fc427a#fc427a;" text="Sales target" wrapText="true" />
+<!--            <ImageView fx:id="salesTargetIcon" fitHeight="31.0" fitWidth="33.0" layoutX="14.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">-->
+<!--               <image>-->
+<!--                  <Image url="@Target%20icon.jpeg" />-->
+<!--               </image>-->
+<!--            </ImageView>-->
+            <Label layoutX="45.0" layoutY="49.0" style="-fx-text-fill: #ffffff#ffffff #ffffff#ffffff #ffffff#ffffff #ffffff#ffffff;" text="\$75,000 (Q3)" />
+            <ProgressBar layoutX="46.0" layoutY="71.0" opacity="0.8" prefHeight="12.0" prefWidth="71.0" progress="0.19" style="-fx-background-color: #ffb730#ffb730;" />
+            <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="6.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Target-icon.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="247.0" layoutY="207.0" style="-fx-text-fill: #ffffff#ffffff #ffffff#ffffff #ffffff#ffffff #ffffff#ffffff;" text="\$0.00" />
+      <Pane layoutX="363.0" layoutY="62.0" prefHeight="85.0" prefWidth="161.0">
+         <children>
+            <Button fx:id="performanceButton" layoutY="1.0" mnemonicParsing="false" prefHeight="84.0" prefWidth="159.0" style="-fx-text-fill: #ffffff#ffffff #ffffff#ffffff; -fx-background-color: #ffb730#ffb730;" text="         Performance" wrapText="true" />
+<!--            <ImageView fx:id="performanceIcon" fitHeight="31.0" fitWidth="33.0" layoutX="14.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">-->
+<!--               <image>-->
+<!--                  <Image url="@Performane%20Icon.png" />-->
+<!--               </image>-->
+<!--            </ImageView>-->
+            <Label layoutX="55.0" layoutY="49.0" style="-fx-text-fill: #ffffff#ffffff #ffffff#ffffff #ffffff#ffffff #ffffff#ffffff;" text="+17% (Q2)" />
+            <ImageView fitHeight="31.0" fitWidth="27.0" layoutX="14.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Performane-Icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TitledPane fx:id="eventsTiltedpane" animated="false" layoutX="17.0" layoutY="302.0" prefHeight="184.0" prefWidth="202.0" text="Events">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="181.0" prefWidth="325.0">
+               <children>
+                  <Button fx:id="EventsButton" layoutX="1.0" mnemonicParsing="false" prefHeight="154.0" prefWidth="199.0" style="-fx-text-fill: #000000#000000 #000000#000000; -fx-background-color: #ffffff#ffffff #ffffff#ffffff #ffffff#ffffff #ffffff#ffffff;" text="Events " wrapText="true" />
+<!--                  <ImageView fx:id="eventImageOne" fitHeight="57.0" fitWidth="63.0" layoutX="75.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                     <image>-->
+<!--                        <Image url="@Calender%20Icon.png" />-->
+<!--                     </image>-->
+<!--                  </ImageView>-->
+                  <Label fx:id="eventLabel" layoutX="34.0" layoutY="97.0" text="(No Upcoming events)" />
+                  <ImageView fitHeight="47.0" fitWidth="51.0" layoutX="77.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Calender-Icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane fx:id="projectTiltedPane" animated="false" layoutX="232.0" layoutY="302.0" prefHeight="184.0" prefWidth="292.0" text="Project Timeline">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="248.0" prefWidth="566.0">
+               <children>
+                  <Button fx:id="projectTmButton" layoutX="1.0" mnemonicParsing="false" prefHeight="154.0" prefWidth="292.0" style="-fx-text-fill: #000000#000000 #000000#000000; -fx-background-color: #ffffff#ffffff #ffffff#ffffff #ffffff#ffffff #ffffff#ffffff;" wrapText="true" />
+<!--                  <ImageView fx:id="projectTMImage" fitHeight="57.0" fitWidth="63.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                     <image>-->
+<!--                        <Image url="@Project%20timeline%20icon.png" />-->
+<!--                     </image>-->
+<!--                  </ImageView>-->
+                  <Label fx:id="ProjectTMLabel" layoutX="71.0" layoutY="25.0" text="(Start a new project)" />
+                  <ImageView fitHeight="58.0" fitWidth="55.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Project-timeline-icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <Button fx:id="logoutButton" layoutX="503.0" layoutY="18.0" mnemonicParsing="false" onAction="#logout" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: #d2d3d4#d2d3d4; -fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000;" text="Logout">
+         <graphic>
+<!--            <ImageView fitHeight="31.0" fitWidth="21.0" opacity="0.69" pickOnBounds="true" preserveRatio="true">-->
+<!--               <image>-->
+<!--                  <Image url="@Logout%20icon.png" />-->
+<!--               </image>-->
+<!--            </ImageView>-->
+         </graphic>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Logout-icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ScrollPane layoutX="17.0" layoutY="157.0" prefHeight="137.0" prefWidth="506.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="194.0" prefWidth="507.0" style="-fx-background-color: #cccdcf#cccdcf;">
+               <children>
+                  <Label layoutX="10.0" layoutY="14.0" prefHeight="36.0" prefWidth="475.0" style="-fx-background-color: #005a96#005a96 #005a96#005a96; -fx-text-fill: #ffffff#ffffff;" text="  Reflux News Feed">
+                     <font>
+                        <Font name="Futura Medium" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="56.0" prefHeight="36.0" prefWidth="475.0" style="-fx-background-color: #ffffff; -fx-text-fill: #000000#000000;" text="  Winter Drop is just around the corner!!!*">
+                     <font>
+                        <Font name="System Font" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="97.0" prefHeight="36.0" prefWidth="475.0" style="-fx-background-color: #ffffff; -fx-text-fill: #000000#000000;" text="  All Reflux Showrooms now open after Lockdown!">
+                     <font>
+                        <Font name="System Font" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="138.0" prefHeight="36.0" prefWidth="475.0" style="-fx-background-color: #ffffff; -fx-text-fill: #000000#000000;" text="  Clearance Sale!!! Flat 10% discount on selected summer products!!!">
+                     <font>
+                        <Font name="System Font" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+    </children>
+</AnchorPane>

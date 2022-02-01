@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectPackage.ManagerCheckStockPageController">
+   <children>
+      <Button fx:id="backToHomeButton" layoutX="14.0" layoutY="17.0" mnemonicParsing="false" onAction="#backToManagerHome" prefHeight="28.0" prefWidth="120.0" style="-fx-background-color: #d2d3d4#d2d3d4 #d2d3d4#d2d3d4; -fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000 #000000#000000 #000000#000000 #000000#000000 #000000#000000;" text="Back to home">
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Home-Icon.jpeg" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Pane layoutX="29.0" layoutY="124.0" prefHeight="247.0" prefWidth="544.0">
+         <children>
+            <TableView prefHeight="247.0" prefWidth="551.0">
+              <columns>
+                <TableColumn prefWidth="94.0" text="Product Code" />
+                <TableColumn prefWidth="98.0" text="Product Name" />
+                  <TableColumn prefWidth="90.0" text="Qty in Stock" />
+                  <TableColumn prefWidth="90.0" text="Restock" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Button fx:id="orderStockButton" layoutX="406.0" layoutY="81.0" mnemonicParsing="false" onAction="#orderStock" prefHeight="28.0" prefWidth="167.0" style="-fx-background-color: #d2d3d4#d2d3d4 #d2d3d4#d2d3d4; -fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000 #000000#000000 #000000#000000 #000000#000000 #000000#000000;" text="Order Stock">
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Stock-Icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="29.0" layoutY="82.0" text="Current Stock">
+         <font>
+            <Font name="Monaco" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="270.0" layoutY="23.0" text="Check/Order Stock">
+         <font>
+            <Font name="Lucida Grande" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="143.0" layoutY="23.0" text="Manager Home -&gt; ">
+         <font>
+            <Font name="Lucida Grande" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

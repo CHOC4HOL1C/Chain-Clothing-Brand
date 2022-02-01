@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectPackage.CustomerGetPremiumPageController">
+   <children>
+      <Label layoutX="273.0" layoutY="23.0" text="Get Premium">
+         <font>
+            <Font name="Lucida Grande" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="141.0" layoutY="23.0" text="Customer Home -&gt; ">
+         <font>
+            <Font name="Lucida Grande" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="backToHomeButton" layoutX="14.0" layoutY="17.0" mnemonicParsing="false" onAction="#backToCustomerHome" text="Back to home">
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Home-Icon.jpeg" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ScrollPane layoutX="14.0" layoutY="54.0" prefHeight="329.0" prefWidth="566.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="443.0" prefWidth="566.0">
+               <children>
+                  <Label layoutX="22.0" layoutY="22.0" text="Premium Benifits">
+                     <font>
+                        <Font name="AppleMyungjo Regular" size="19.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="280.0" layoutY="16.0" orientation="VERTICAL" prefHeight="257.0" prefWidth="6.0" />
+                  <Label layoutX="315.0" layoutY="82.0" text="Pay Premium fee: (use QR code below)" />
+                  <TextField layoutX="316.0" layoutY="113.0" prefHeight="26.0" prefWidth="207.0" promptText="Enter email address" />
+                  <Button fx:id="signUpForPremiumButton" layoutX="396.0" layoutY="166.0" mnemonicParsing="false" text="Sign up for Premium" />
+                  <Text layoutX="22.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="• Free Fast Home-Delivery!                                •Try on feature                                •Outfit Prebooking                                 •Yearlong special offers!                                        •Reward  Points" wrappingWidth="172.5" />
+                  <Label layoutX="307.0" layoutY="22.0" text="Sign Up for Premium ">
+                     <font>
+                        <Font name="AppleMyungjo Regular" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

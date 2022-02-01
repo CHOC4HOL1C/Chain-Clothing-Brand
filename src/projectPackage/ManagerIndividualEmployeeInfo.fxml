@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectPackage.ManagerIndividualApplicationPageController">
+   <children>
+      <Pane fx:id="selectedUserComplaint" layoutX="27.0" layoutY="78.0" prefHeight="264.0" prefWidth="545.0">
+         <children>
+            <ScrollPane prefHeight="264.0" prefWidth="545.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="269.0" prefWidth="542.0">
+                     <children>
+                        <Label layoutX="16.0" layoutY="14.0" text="Employee Name:" />
+                        <Label layoutX="16.0" layoutY="37.0" text="Employee ID:" />
+                        <Label layoutX="16.0" layoutY="60.0" text="Address:" />
+                        <Label layoutX="16.0" layoutY="90.0" text="Contact Number: " />
+                        <Label layoutX="16.0" layoutY="107.0" text="Email:" />
+                        <Label layoutX="14.0" layoutY="211.0" text="Unreviewed Complaints: " />
+                        <Label layoutX="14.0" layoutY="228.0" text="Unread Applications:" />
+                        <Label layoutX="15.0" layoutY="160.0" text="Current Assigned Task:" />
+                        <Label layoutX="14.0" layoutY="177.0" text="Task Completion Rate:" />
+                        <Label layoutX="16.0" layoutY="126.0" text="Attendance:" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children></Pane>
+      <Button fx:id="backToHomeButton" layoutX="24.0" layoutY="17.0" mnemonicParsing="false" onAction="#backToManagerHome" prefHeight="28.0" prefWidth="120.0" style="-fx-background-color: #d2d3d4#d2d3d4 #d2d3d4#d2d3d4; -fx-text-fill: #000000#000000 #000000#000000 #000000#000000 #000000#000000 #000000#000000 #000000#000000 #000000#000000 #000000#000000;" text="Back to home">
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Home-Icon.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="323.0" layoutY="23.0" text="Employee Management -&gt; ">
+         <font>
+            <Font name="Lucida Grande" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="201.0" layoutY="23.0" text="Manager Home -&gt; ">
+         <font>
+            <Font name="Lucida Grande" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="201.0" layoutY="45.0" text="-&gt; Individual Employee Info">
+         <font>
+            <Font name="Lucida Grande" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="150.0" layoutY="18.0" mnemonicParsing="false" onAction="#backToEmployeeManagement" prefHeight="16.0" prefWidth="28.0">
+         <graphic>
+            <ImageView fitHeight="17.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Back-button-Icon.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
